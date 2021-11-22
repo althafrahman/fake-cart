@@ -1,0 +1,41 @@
+<%- include('../partials/head.ejs') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                Add Product
+            </div>
+            <div class="col-md-6" style="text-align: right;">
+                <a class="btn btn-success text-right" href="/">Add +</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+
+            <form method="POST" action="/product/create" style="width: 100%">
+
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="text" name="image" class="form-control">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <%- include('../partials/footer.ejs') %>
