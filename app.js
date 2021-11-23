@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 // product List Routes
 // 
 
-app.use(productsRoute);
+app.use('/product', productsRoute);
 
 // 
 // Product route ends here
