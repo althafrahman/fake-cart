@@ -20,11 +20,29 @@ mongoose.connect(dbURL, () => {
     });
 });
 
+// root
+
 app.get('/', (req, res) => {
+    res.redirect('/product');
+})
+
+
+// get list of products
+
+app.get('/product', (req, res) => {
     res.render('pages/product-list');
 })
 
 
+// Get create form 
+
 app.get('/product/create', (req, res) => {
     res.render('pages/products-form');
+})
+
+
+// While posting Data(new Data)
+
+app.post('/product/create', (req, res) => {
+
 })
