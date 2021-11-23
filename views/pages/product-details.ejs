@@ -1,0 +1,27 @@
+<%- include('../partials/head.ejs') %>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h3>Products</h3>
+            </div>
+            <div class="col-md-6" style="text-align: right;">
+                <a class="btn btn-info text-right" href="/product/edit/<%- product.id %>">Edit <i class="fa fa-pencil"></i></a>
+            </div>
+        </div>
+        <div class="row mt-3 d-block">
+            <img class="image" src="<%- product.image %>" alt="">
+            <h3>
+                <%= product.title %>
+            </h3>
+            <p>
+                <%= product.description %>
+            </p>
+            <h5 style="color : rgb(31, 170, 12)">
+                <%= product.price %>
+            </h5>
+        </div>
+    </div>
+
+
+    <%- include('../partials/footer.ejs') %>
