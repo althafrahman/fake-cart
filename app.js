@@ -9,6 +9,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 // require products route
 const productsRoute = require('./routes/products-route');
+// require cart routes
+const cartRoute = require('./routes/cart-route');
 // Using express
 const app = express();
 // Setting Static (Public)
@@ -32,10 +34,16 @@ mongoose.connect(dbURL, () => {
     });
 });
 
-// root
+// *************************************
+// root routes
+// 
 app.get('/', (req, res) => {
     res.redirect('/product');
 })
+
+// 
+// root routes ends here
+// **************************************
 
 
 // **********************************
@@ -43,6 +51,17 @@ app.get('/', (req, res) => {
 // 
 
 app.use('/product', productsRoute);
+
+// 
+// Product route ends here
+// ***************************************
+
+
+// **********************************
+// product List Routes
+// 
+
+app.use('/cart', cartRoute);
 
 // 
 // Product route ends here

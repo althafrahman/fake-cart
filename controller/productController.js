@@ -6,7 +6,7 @@ const Products = require('../model/product')
 const product_index = (req, res) => {
     Products.find()
         .then((result) => {
-            res.render('pages/product-list', { products: result });
+            res.render('pages/product/product-list', { products: result });
         })
         .catch((err) => console.log(err))
 
@@ -14,7 +14,7 @@ const product_index = (req, res) => {
 
 // prducts Create form
 const product_create_get = (req, res) => {
-    res.render('pages/products-form', { product: null, mode: 'create' });
+    res.render('pages/product/products-form', { product: null, mode: 'create' });
 }
 
 // product Create Post data
@@ -54,7 +54,7 @@ const product_view_get = (req, res) => {
     const productId = req.params.id;
     Products.findById(productId)
         .then((product) => {
-            res.render('pages/product-details', { product: product })
+            res.render('pages/product/product-details', { product: product })
         })
         .catch((err) => console.log(err))
 }
@@ -64,7 +64,7 @@ const product_edit_get = (req, res) => {
     const productId = req.params.id;
     Products.findById(productId)
         .then((product) => {
-            res.render('pages/products-form', { product: product, mode: 'edit' })
+            res.render('pages/product/products-form', { product: product, mode: 'edit' })
         })
         .catch((err) => console.log(err))
 }
