@@ -25,17 +25,13 @@
                                 <%= i+1 %>
                             </td>
                             <td>
-                                <%= item.item_name %>
+                                <%= item.item_id %>
                             </td>
                             <td>
                                 <%= item.quantity %>
                             </td>
                             <td>
-                                <a class="btn btn-default" href="/product/view/<%= product.id %>"><i
-                                        class="fa fa-eye"></i></a>
-                                <a class="btn btn-default" href="/product/edit/<%= product.id %>"><i
-                                        class="fa fa-pencil"></i></a>
-                                <button class="btn btn-default deleteBtn" data-href="/product/delete/<%= product.id %>"><i class="fa fa-trash"></i></button>
+                                <button class="btn btn-default deleteBtn" data-href="/cart/delete/<%= item.id %>"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
                         <% })} %>

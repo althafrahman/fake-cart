@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 // Setup cart Schema
 const cartSchema = new Schema({
     item_id: {
-        type: Number,
+        type: String,
         required: true,
     },
     quantity: {

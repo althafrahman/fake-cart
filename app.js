@@ -19,6 +19,7 @@ app.use(express.static('public'));
 app.set("view engine", "ejs");
 // use 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // Setting dbUrl
 const dbURL = 'mongodb+srv://admin:admin@cluster0.u6hsi.mongodb.net/fake-cart?retryWrites=true&w=majority';
 
@@ -58,11 +59,12 @@ app.use('/product', productsRoute);
 
 
 // **********************************
-// product List Routes
+// cart Routes
 // 
 
 app.use('/cart', cartRoute);
 
+
 // 
-// Product route ends here
+// cart route ends here
 // ***************************************
